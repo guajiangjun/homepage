@@ -36,44 +36,6 @@
             background: #CCC49F;
         }
     </style>
-    <style>
-        .arrow {
-            border: 9px solid transparent;
-            border-bottom-color: #3DA0DB;
-            width: 0px;
-            height: 0px;
-            top: 0px
-        }
-
-        .stick {
-            width: 8px;
-            height: 14px;
-            border-radius: 1px;
-            background-color: #3DA0DB;
-            top: 15px;
-        }
-
-        #back_top div {
-            position: absolute;
-            margin: auto;
-            right: 0px;
-            left: 0px;
-        }
-
-        #back_top {
-            background-color: #dddddd;
-            height: 38px;
-            width: 38px;
-            border-radius: 3px;
-            display: block;
-            cursor: pointer;
-            position: fixed;
-            right: 50px;
-            bottom: 100px;
-            display: none;
-        }
-    </style>
-
 
 </head>
 
@@ -82,15 +44,13 @@
         <!-- 头部 -->
 
         <div class="header">
-            <h1>计算代数几何</h1>
+            <h1>瓜江君的主页</h1>
         </div>
 
 
         <!-- 内容 -->
 
         <div class="content">
-            <h1 align="center">瓜江君的主页</h1>
-            <hr>
 
             <center>
                 <audio src="music/Passenger - Let Her Go.mp3" controls></audio><br>
@@ -132,10 +92,10 @@
                 <div id="上一页" style="float: left;">
                     <script>
                         function up() {
-                            window.location.href = "cag/cag.html";
+                            window.location.href = "cag/index.html";
                         }
                     </script>
-                    <input type="button" value="上一页:代数方程求解理论" onclick="up()" />
+                    <input type="button" value="上一页:代数方程求解理论" onclick="up()" style="height:50px;" />
                 </div>
 
                 <div id="下一页" style="float: right;">
@@ -145,53 +105,13 @@
                             window.location.href = "cas/cas.html";
                         }
                     </script>
-                    <input type="button" value="下一页:计算机代数" onclick="down()" />
+                    <input type="button" value="下一页:计算机代数" onclick="down()" style="height:50px;" />
                 </div>
                 <div id="id4" style="clear:both"></div>
             </div>
             <div align="center">last updated:2020-11-19</div>
         </div>
     </div>
-
-
-    <!-- 返回顶部功能 -->
-    <div>
-
-        <div id="article"></div>
-        <div id="back_top">
-            <div class="arrow"></div>
-            <div class="stick"></div>
-        </div>
-        <script src="http://cdn.staticfile.org/jquery/1.11.1-rc2/jquery.min.js"></script>
-        <script>
-            $(function () {
-
-                $(window).scroll(function () {  //只要窗口滚动,就触发下面代码
-
-                    var scrollt = document.documentElement.scrollTop + document.body.scrollTop; //获取滚动后的高度
-
-                    if (scrollt > 200) {  //判断滚动后高度超过200px,就显示
-
-                        $("#back_top").fadeIn(400); //淡入
-
-                    } else {
-
-                        $("#back_top").stop().fadeOut(400); //如果返回或者没有超过,就淡出.必须加上stop()停止之前动画,否则会出现闪动
-
-                    }
-
-                });
-
-                $("#back_top").click(function () { //当点击标签的时候,使用animate在200毫秒的时间内,滚到顶部
-
-                    $("html,body").animate({ scrollTop: "0px" }, 200);
-
-                });
-
-            });
-        </script>
-    </div>
-</body>
 
 
 
